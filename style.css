@@ -209,7 +209,7 @@ footer {
     text-align: center;
     padding: 40px;
     border-radius: 20px;
-    background: linear-gradient(135deg, green, rgba(139,209,51,1));
+    background: linear-gradient(135deg,rgba(139,209,51,1), rgba(139,209,51,1));
     box-shadow: 0 8px 25px rgba(0,0,0,0.2);
     animation: fadeIn 1.5s ease-in-out;
     font-size: 1.2rem;
@@ -218,7 +218,7 @@ footer {
 
 
 .concept-h3{
-  color: rgba(139,209,51,1);
+  color: white;
   font-family: "Trebuchet MS";
 }
 
@@ -474,6 +474,12 @@ footer {
 
 .contact-detail {
     font-weight: 600;
+    margin: 2px 0 0 0;
+    font-size: 1rem;
+}
+.contact-detail-c{
+  font-size: 0.85rem;
+  font-weight: 600;
     margin: 2px 0 0 0;
 }
 
@@ -1365,8 +1371,10 @@ footer {
 
 /* Couleur de fond du bloc menu déroulant */
 .dropdown-menu {
-    background-color: rgba(139,209,51,1) !important; /* Gris foncé */
-    border: 1px solid rgba(139,209,51,1);;
+    background-color: rgba(139,209,51,1) !important; 
+    border: 0.2px solid rgba(139,209,51,1);
+    
+    
 }
 
 /* Couleur du texte des liens */
@@ -1432,7 +1440,7 @@ footer {
 
 .intro-text {
     margin-bottom: 30px;
-    line-height: 1.6;
+    /* line-height: 1.6; */
     font-size: 1.2rem;
 }
 
