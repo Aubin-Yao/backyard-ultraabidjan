@@ -616,7 +616,7 @@ footer {
 .marquee-content {
     display: flex;
     white-space: nowrap;
-    animation: scroll-left 40s linear infinite;
+    animation: scroll-left 10s linear infinite;
 }
 
 .marquee-container:hover .marquee-content {
@@ -1534,3 +1534,29 @@ footer {
       font-size: 0.9rem;
     }
   }
+
+  footer {
+    background-color: rgba(139,209,51,1);
+    color: black;
+    padding: 40px 0 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Pour le mobile */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    margin: 20px;
+    min-width: 200px;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid ;
+    margin-top: 30px;
+    padding-top: 20px;
+}
