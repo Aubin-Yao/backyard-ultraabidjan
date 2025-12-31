@@ -605,7 +605,7 @@ footer {
     transform: scale(0.98);
 }
 
-.marquee-container {
+/* .marquee-container {
     overflow: hidden; 
     height: 100px; 
     background-color: #f0f0f0; 
@@ -628,15 +628,64 @@ footer {
     width: auto; 
     margin: 0 30px; 
     align-self: center; 
-}
+} */
 
-@keyframes scroll-left {
+/* @keyframes scroll-left {
     from {
         transform: translateX(0); 
     }
     to {
         transform: translateX(-50%); 
     }
+} */
+
+.marquee-container {
+    overflow: hidden;
+    width: 100%;
+    background: #f0f0f0;
+    padding: 15px 0;
+    display: flex;
+}
+
+.marquee-content {
+    display: flex;
+    width: max-content; /* Important pour que le flex ne s'écrase pas */
+    animation: scroll-infinite 30s linear infinite;
+}
+
+.marquee-content img {
+    height: 70px; /* Ajustez selon vos besoins */
+    margin: 0 20px;
+    flex-shrink: 0; /* Empêche les logos de rétrécir */
+}
+
+/* L'astuce de la boucle infinie */
+@keyframes scroll-infinite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* On défile jusqu'à la moitié (fin du bloc 1) */
+        transform: translateX(-50%);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .marquee-content img {
+        height: 40px;    /* Taille adaptée aux petits écrans */
+        margin: 0 20px;  /* Espace réduit pour voir plus de logos en même temps */
+    }
+
+    .marquee-content {
+        /* On peut ajuster la vitesse si nécessaire sur mobile */
+        animation-duration: 15s; 
+    }
+}
+
+/* Optionnel : Pause au survol */
+.marquee-container:hover .marquee-content {
+    animation-play-state: paused;
 }
 
 .sponsor-section {
