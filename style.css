@@ -108,9 +108,21 @@ nav ul li a:hover {
     transform: translateX(-100%);
   }
 }
+
+@media (max-width: 768px) {
+    .actualite {
+        position: relative;
+        left: auto;
+        width: 95%;
+        margin: 20px auto;
+    }
+}
+html, body {
+    overflow-x: hidden;
+}
+
 footer {
   background-color:rgba(139,209,51,1);
-  color: #f8f9fa;
   padding: 20px 0;
   font-size: 0.95rem;
   width: 100%;
@@ -477,15 +489,18 @@ footer {
     margin: 2px 0 0 0;
     font-size: 1rem;
 }
-.contact-detail-c{
+.contact-detail-c {
   font-size: 0.85rem;
   font-weight: 600;
     margin: 2px 0 0 0;
+    
+    
 }
 
 .contact-detail a {
-    color: rgba(139,209,51,1);
+    color:black;
     text-decoration: none;
+
 }
 
 .section-title {
@@ -638,55 +653,55 @@ footer {
         transform: translateX(-50%); 
     }
 } */
-
-.marquee-container {
-    overflow: hidden;
+ .marquee-container {
     width: 100%;
+    overflow: hidden;
     background: #f0f0f0;
     padding: 15px 0;
-    display: flex;
 }
 
+/* Le bloc qui défile */
 .marquee-content {
     display: flex;
-    width: max-content; /* Important pour que le flex ne s'écrase pas */
-    animation: scroll-infinite 30s linear infinite;
+    width: 200%;              /* ⚠️ CRITIQUE */
+    animation: marquee 25s linear infinite;
 }
 
+/* Logos */
 .marquee-content img {
-    height: 70px; /* Ajustez selon vos besoins */
-    margin: 0 20px;
-    flex-shrink: 0; /* Empêche les logos de rétrécir */
+    height: 50px;
+    width: auto;
+    margin: 0 30px;
+    flex-shrink: 0;           /* ⚠️ CRITIQUE */
 }
 
-/* L'astuce de la boucle infinie */
-@keyframes scroll-infinite {
-    0% {
+/* Animation stable */
+@keyframes marquee {
+    from {
         transform: translateX(0);
     }
-    100% {
-        /* On défile jusqu'à la moitié (fin du bloc 1) */
+    to {
         transform: translateX(-50%);
     }
 }
 
-
+/* Mobile */
 @media (max-width: 768px) {
-    .marquee-content img {
-        height: 40px;    /* Taille adaptée aux petits écrans */
-        margin: 0 20px;  /* Espace réduit pour voir plus de logos en même temps */
+    .marquee-content {
+        animation-duration: 15s;
     }
 
-    .marquee-content {
-        /* On peut ajuster la vitesse si nécessaire sur mobile */
-        animation-duration: 15s; 
+    .marquee-content img {
+        height: 40px;
+        margin: 0 20px;
     }
 }
 
-/* Optionnel : Pause au survol */
+/* Pause au survol (PC) */
 .marquee-container:hover .marquee-content {
     animation-play-state: paused;
 }
+
 
 .sponsor-section {
     max-width: 1200px;
@@ -1177,6 +1192,7 @@ footer {
 
   .btn {
     grid-template-columns: 1fr;
+    
   }
 
   .records {
