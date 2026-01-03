@@ -653,54 +653,37 @@ footer {
         transform: translateX(-50%); 
     }
 } */
- .marquee-container {
+ /* .marquee-container {
     width: 100%;
     overflow: hidden;
     background: #f0f0f0;
     padding: 15px 0;
-}
+} */
 
-/* Le bloc qui défile */
-.marquee-content {
+/* .marquee-content {
     display: flex;
-    width: 200%;              /* ⚠️ CRITIQUE */
-    animation: marquee 25s linear infinite;
-}
+    width: 200%;              
+    animation: marquee 30s linear infinite;
+} */
 
 /* Logos */
-.marquee-content img {
+/* .marquee-content img {
     height: 50px;
     width: auto;
     margin: 0 30px;
-    flex-shrink: 0;           /* ⚠️ CRITIQUE */
-}
+    flex-shrink: 0;        
+} */
 
 /* Animation stable */
-@keyframes marquee {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
-}
+
 
 /* Mobile */
-@media (max-width: 768px) {
-    .marquee-content {
-        animation-duration: 15s;
-    }
 
-    .marquee-content img {
-        height: 40px;
-        margin: 0 20px;
-    }
-}
 
 /* Pause au survol (PC) */
-.marquee-container:hover .marquee-content {
+/* .marquee-container:hover .marquee-content {
     animation-play-state: paused;
-}
+} */
 
 
 .sponsor-section {
@@ -1491,41 +1474,32 @@ footer {
 }
 
 /* Styles de base de la section */
-.results-section {
-    padding: 40px 20px;
-    text-align: center;
-    font-family: 'Trebuchet MS';
-    font-size: 1.2rem;
-}
+
 
 .container {
     max-width: 1000px;
     margin: 0 auto;
 }
 
-.intro-text {
-    margin-bottom: 30px;
-    /* line-height: 1.6; */
-    font-size: 1.2rem;
-}
 
-.congrats {
+
+/* .congrats {
     font-weight: bold;
-    color: rgba(139,209,51,1); /* Une couleur d'accentuation pour l'impact */
+    color: rgba(139,209,51,1); 
     margin-top: 15px;
-}
+} */
 
 /* Grille de boutons Responsive */
-.results-grid {
+/* .results-grid {
     display: flex;
     flex-wrap: wrap; /* Permet de passer à la ligne si pas assez de place */
-    justify-content: center;
-    gap: 15px; /* Espace entre les boutons */
-    margin-top: 20px;
-}
+    /* justify-content: center; */
+    /* gap: 15px; Espace entre les boutons */
+    /* margin-top: 20px;
+/* } */  
 
 /* Style des boutons */
-.btn-result {
+/* .btn-result {
     display: inline-block;
     padding: 15px 25px;
     background-color: rgba(139,209,51,1);
@@ -1534,12 +1508,12 @@ footer {
     border-radius: 5px;
     font-weight: bold;
     transition: background 0.3s ease;
-    min-width: 200px; /* Largeur minimum pour l'harmonie */
-}
+    min-width: 200px; 
+/* } */
 
-.btn-result:hover {
+/* .btn-result:hover {
     background-color: rgba(54, 209,191, 1);
-}
+} */
 
 /* --- Media Queries pour tablettes et mobiles --- */
 
@@ -1624,4 +1598,39 @@ footer {
     border-top: 1px solid ;
     margin-top: 30px;
     padding-top: 20px;
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;        /* clé absolue */
+  animation: marquee 35s linear infinite;
+}
+
+.marquee-track img {
+  height: 70px;
+  margin: 0 10px;
+  flex-shrink: 0;
+}
+
+/* animation CONTINUE */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* mobile : ralentir */
+@media (max-width: 768px) {
+  .marquee-track {
+    animation-duration: 50s;
+  }
 }
