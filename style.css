@@ -1809,3 +1809,25 @@ footer {
                 font-size: 0.95rem;
                } 
                 }
+
+ .champions-wrapper {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    
+    flex-wrap: wrap;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    width: 350px;              /* même largeur */
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.btn-read-more {
+    margin-top: auto;          /* 🔥 clé pour l’alignement */
+}
+
