@@ -1809,6 +1809,9 @@ footer {
                 font-size: 0.95rem;
                } 
                 }
-
+.contact-detail-c a{
+  text-decoration: none;
+  color: black;
+}
  
 
