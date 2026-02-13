@@ -2,8 +2,8 @@
 // CONFIGURATION GLOBALE
 // ====================================
 const CONFIG = {
-    countdownTarget: new Date("May 23, 2026 00:00:00").getTime(),
-    animationDelay: 120, 
+    countdownTarget: new Date("April 15, 2026 22:59:00").getTime(),
+    animationDelay: 61, 
     scrollThreshold: 0.1
 };
 

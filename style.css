@@ -97,7 +97,7 @@ nav ul li a:hover {
   white-space: nowrap;
   display: inline-block;
   position: relative;
-  animation: defilement 8s linear infinite;
+  animation: defilement 5s linear infinite;
 }
 
 @keyframes defilement {
