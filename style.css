@@ -344,18 +344,19 @@ footer {
 .register-button {
   display: inline-block;
   padding: 16px 35px;
-  background: linear-gradient(rgba(139,209,51,1), rgba(139,209,51,1), rgba(139,209,51,1));
+  background-color:   rgba(139,209,51,1);
   color: white;
   font-size: 18px;
   text-decoration: none;
-  border-radius: 50px;
+  border-radius: 10px;
   box-shadow: 0 12px 25px rgba(0,0,0,0.4);
-  transition: 0.4s;
+  /* transition: 0.4s; */
 }
 
 .register-button:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 20px 35px rgba(0,0,0,0.5);
+  /* transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.5); */
+  background-color: rgba(54, 209,191, 1);
 }
 
 @keyframes pulse {
@@ -1367,7 +1368,7 @@ footer {
     box-shadow: 0 4px 12px rgba(54, 209,191, 1);
 }
 
-.btn-read-more:active {
+.btn-read-more:hover {
     transform: translateY(0);
     background-color: #004085;
 }

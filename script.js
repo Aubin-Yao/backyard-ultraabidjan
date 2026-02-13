@@ -246,7 +246,7 @@ styleSheet.textContent = `
     }
     
     .btn-read-more:hover {
-        background-color: rgba(139,209,51,1);
+        background-color: rgba(54, 209,191, 1);
         transform: translateY(-2px);
     }
     
