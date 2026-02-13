@@ -533,10 +533,11 @@ footer {
     padding: 14px;
     background: rgba(139,209,51,1);
     border: none;
-    border-radius: 30px;
+    border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
     margin-top: 10px;
+    color: white;
 }
 
 .btn-c:hover {
